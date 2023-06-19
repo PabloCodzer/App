@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroNovoUsuario"
+    android:background="#D9D9D9">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="403dp"
+        android:layout_height="732dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/voltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:outlineAmbientShadowColor="#595959"
+            android:outlineSpotShadowColor="#D9D9D9"
+            android:tint="@color/black"
+            app:backgroundTint="#595959"
+            app:backgroundTintMode="add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutSenhaCadastro"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/LayoutEmailCadastro"
+            android:layout_width="291dp"
+            android:layout_height="82dp"
+            android:background="#F2F2F2"
+            android:hint="Email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.316"
+            app:startIconDrawable="@drawable/baseline_email_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cadastroEmail"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="#F2F2F2"
+                android:ems="15"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/LayoutSenhaCadastro"
+            android:layout_width="291dp"
+            android:layout_height="78dp"
+            android:background="#F2F2F2"
+            android:hint="Senha"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutEmailCadastro"
+            app:layout_constraintVertical_bias="0.118"
+            app:passwordToggleEnabled="false"
+            app:passwordToggleTint="@color/black"
+            app:startIconDrawable="@drawable/baseline_vpn_key_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cadastroSenha"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="#F2F2F2"
+                android:ems="15"
+                android:enabled="true"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="290dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/TestoCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastro Novo Usuario"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/LayoutEmailCadastro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/botaoCadastra"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTint="#FFFFFF"
+            android:foregroundTint="#FFFFFF"
+            android:outlineAmbientShadowColor="#FFFFFF"
+            android:text="CADASTRAR"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#0D0D0D"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textStyle="bold"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/voltar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutSenhaCadastro"
+            app:strokeColor="#595959" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
